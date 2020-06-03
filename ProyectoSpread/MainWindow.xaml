@@ -1,0 +1,38 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoSpread"        
+        xmlns:ss="http://schemas.grapecity.com/windows/spreadsheet/2012" 
+        x:Class="ProyectoSpread.MainWindow"        
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!--Control area-->
+        <ss:GcSpreadSheet Name="gcSpreadSheet1"/>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="txtSearch" Width="100" VerticalAlignment="Center"/>
+            <Button Content="Search" x:Name="btnSearch"  Grid.Column="1" VerticalAlignment="Center"  Click="btnSearch_Click"/>
+            <Button Content="Clear" x:Name="btnClear"  Grid.Column="2" VerticalAlignment="Center" Click="btnClearSearch_Click"/>
+            <Button Content="Update" x:Name="btnUpdate"  Grid.Column="4" VerticalAlignment="Center" Click="btnUpdate_Click" IsEnabled="False" />
+            <Button Content="Delete" x:Name="btnDelete"  Grid.Column="5" VerticalAlignment="Center" Click="btnDelete_Click"/>
+            <Button Content="Add"  x:Name="btnAdd"  Grid.Column="6" VerticalAlignment="Center" Click="btnAdd_Click"/>
+        </Grid>
+    </Grid>
+</Window>
